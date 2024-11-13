@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фітькайло_Індивідуальний проект</title>
+    <style>
+     
+        body {
+            font-family: 'Daytona Pro Condensed', sans-serif;
+        }
+
+        .burger {
+            position: absolute;
+            left: 100px;
+            top: 40px;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .burger div {
+            width: 60%;
+            height: 2px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .rectangle {
+            position: absolute;
+            left: 100px;
+            top: 80px;
+            width: 1110px;
+            height: 400px;
+            border: 10px solid #ededed;
+            background-color: white;
+        }
+
+        .small-rectangle {
+            position: absolute;
+            top: 40px;
+            right: 115px;
+            width: 80px;
+            height: 20px;
+            background-color: white;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 10px;
+            color: black;
+            font-family: 'Daytona Pro Condensed', sans-serif;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px yellow;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .small-rectangle:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .phone-text {
+            position: absolute;
+            top: 45px;
+            right: 240px;
+            font-size: 11px;
+            color: black;
+            font-family: 'Daytona Pro Condensed', sans-serif;
+            font-weight: bold;
+        }
+
+
+
+        .image1-container {
+    position: absolute;
+    right: 85px;
+    top: 80px;
+    width: 25px; /* Ширина зображення */
+    height: auto; /* Висота автоматично */
+    overflow: hidden; /* Забезпечує, щоб зображення не виходило за межі контейнера */
+}
+
+.image1-container img {
+    width: 100%; /* Ширина зображення, що відповідає контейнеру */
+    height: auto; /* Висота зображення залишається пропорційною */
+    transition: transform 0.3s ease; /* Плавне масштабування при наведенні */
+}
+
+.image1-container:hover img {
+    transform: scale(1.1); /* Збільшується при наведенні */
+}
+
+.image2-container {
+    position: absolute;
+    right: 85px;
+    top: 120px;
+    width: 15px; /* Ширина зображення */
+    height: auto; /* Висота автоматично */
+    overflow: hidden; /* Забезпечує, щоб зображення не виходило за межі контейнера */
+}
+
+.image2-container img {
+    width: 100%; /* Ширина зображення, що відповідає контейнеру */
+    height: auto; /* Висота зображення залишається пропорційною */
+    transition: transform 0.3s ease; /* Плавне масштабування при наведенні */
+}
+
+.image2-container:hover img {
+    transform: scale(1.1); /* Збільшується при наведенні */
+}
+
+
+.image3-container {
+    position: absolute;
+    right: 82px;
+    top: 145px;
+    width: 25px; /* Ширина зображення */
+    height: auto; /* Висота автоматично */
+    overflow: hidden; /* Забезпечує, щоб зображення не виходило за межі контейнера */
+}
+
+.image3-container img {
+    width: 100%; /* Ширина зображення, що відповідає контейнеру */
+    height: auto; /* Висота зображення залишається пропорційною */
+    transition: transform 0.3s ease; /* Плавне масштабування при наведенні */
+}
+
+.image3-container:hover img {
+    transform: scale(1.1); /* Збільшується при наведенні */
+}
+
+
+
+.image4-container {
+    position: absolute;
+    right: 85px;
+    top: 170px;
+    width: 15px; /* Ширина зображення */
+    height: auto; /* Висота автоматично */
+    overflow: hidden; /* Забезпечує, щоб зображення не виходило за межі контейнера */
+}
+
+.image4-container img {
+    width: 100%; /* Ширина зображення, що відповідає контейнеру */
+    height: auto; /* Висота зображення залишається пропорційною */
+    transition: transform 0.3s ease; /* Плавне масштабування при наведенні */
+}
+
+.image4-container:hover img {
+    transform: scale(1.1); /* Збільшується при наведенні */
+}
+
+.image5-container {
+    position: absolute;
+    right: 85px;
+    top: 205px;
+    width: 15px; /* Ширина зображення */
+    height: auto; /* Висота автоматично */
+    overflow: hidden; /* Забезпечує, щоб зображення не виходило за межі контейнера */
+}
+
+.image5-container img {
+    width: 100%; /* Ширина зображення, що відповідає контейнеру */
+    height: auto; /* Висота зображення залишається пропорційною */
+    transition: transform 0.3s ease; /* Плавне масштабування при наведенні */
+}
+
+.image5-container:hover img {
+    transform: scale(1.1); /* Збільшується при наведенні */
+}
+
+
+        .yellow-trapezoid {
+            position: absolute;
+            left: 100px;
+            top: 80px;
+            width: 630px;
+            height: 420px;
+            background-color: yellow;
+            clip-path: polygon(0% 0%, 80% 10%, 100% 100%, 0% 100%, 0% 80%);
+        }
+
+        .line {
+            position: absolute;
+            left: 60px;
+            width: 10px;
+            height: 1px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .line1 {
+            top: 300px;
+            background-color: yellow;
+        }
+
+        .line2 { top: 305px; }
+        .line3 { top: 310px; }
+        .line4 { top: 315px; }
+        .line5 { top: 320px; }
+
+        .yellow-trapezoid h1 {
+    font-size: 45px;
+    font-family: 'Georgia', serif; /* Заміна шрифту */
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    cursor: move;
+    user-select: none;
+    position: absolute;
+    top: 90px;
+    left: 45px;
+}
+
+
+        .small-text {
+            font-size: 12px;
+            font-family: 'Daytona Pro Condensed', sans-serif;
+            color: black;
+            position: absolute;
+            top: 255px;
+            left: 45px;
+            width: 600px;
+            text-align: justify;
+        }
+
+        .watch-more {
+            font-size: 10px;
+            font-family: 'Daytona Pro Condensed', sans-serif;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            top: 315px;
+            left: 45px;
+        }
+
+        .watch-more-line {
+            position: absolute;
+            top: 330px;
+            left: 45px;
+            width: 21px;
+            height: 1px;
+            background-color: black;
+        }
+        .watch-more2 {
+    font-size: 10px;
+    font-family: 'Daytona Pro Condensed', sans-serif;
+    color: rgb(117, 117, 117);
+    font-weight: bold;
+    position: absolute;
+    top: 1180px; /* Позиціонування під існуючими блоками */
+    left: 470px;
+}
+
+.watch-more-line2 {
+    position: absolute;
+    top: 1195px; /* Позиціонування під текстом */
+    left: 470px;
+    width: 21px;
+    height: 1px;
+    background-color: rgb(251, 255, 0);
+}
+
+
+
+        .vertical-text {
+            position: absolute;
+            right: 90px;
+            top: 385px;
+            font-size: 11px;
+            color: black;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-family: 'Daytona Pro Condensed', sans-serif;
+        }
+
+        .image-container {
+    position: absolute;
+    left: 570px; /* Зміщено на 20 пікселів праворуч */
+    top: 500px;
+    width: 600px;
+    height: auto;
+}
+
+.small-yellow-trapezoid {
+    position: absolute;
+    left: 570px; /* Зміщено на 20 пікселів праворуч */
+    top: 625px;
+    width: 180px;
+    height: 40px;
+    background-color: yellow;
+    clip-path: polygon(0% 100%, 100% 100%, 85% 30%, 15% 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif; /* Заміна шрифту */
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+ 
+.small2-yellow2-trapezoid2 {
+    position: absolute;
+    left: 410px; /* Зміщено на 20 пікселів праворуч */
+    top: 980px;
+    width: 125px;
+    height: 40px;
+    background-color: yellow;
+    clip-path: polygon(0% 100%, 100% 100%, 85% 30%, 15% 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif; /* Заміна шрифту */
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.mission-text {
+    position: absolute;
+    left: 390px; /* Зміщено на 20 пікселів праворуч */
+    top: 680px;
+    width: 600px;
+    font-size: 12px;
+    color: rgb(117, 117, 117);
+    font-family: 'Daytona Pro Condensed';
+    text-align: justify;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.mission2-text2 {
+    position: absolute;
+    left: 318px; /* Зміщено на 20 пікселів праворуч */
+    top: 1030px;
+    width: 600px;
+    font-size: 12px;
+    color: rgb(117, 117, 117);
+    font-family: 'Daytona Pro Condensed';
+    text-align: justify;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.logo-container {
+    position: absolute;
+    left: 470px; /* Зміщено на 20 пікселів праворуч */
+    top: 830px;
+    width: 150px;
+    height: auto;
+}
+
+.blue-rectangle {
+    position: absolute;
+    width: 220px;
+    height: 140px;
+    background-color: #314e55;
+    border-top-left-radius: 20px;
+    border: none;
+}
+
+.rect1 {
+    left: 550px;
+    top: 975px;
+}
+
+.rect2 {
+    left: 790px;
+    top: 975px;
+}
+
+.rect3 {
+    left: 550px;
+    top: 1130px;
+}
+
+.rect4 {
+    left: 790px;
+    top: 1130px;
+}
+
+
+.white-space {
+    width: 100%; /* Ширина зони на всю ширину контейнера */
+    height: 1350px; /* Висота білої зони */
+    background-color: white; /* Колір фону білий */
+    margin-top: 20px; /* Відступ зверху (можна коригувати) */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="rectangle"></div>
+
+    <div class="small-rectangle">Contact us</div>
+
+    <div class="phone-text">PHONE: (380)68 - 9696-905</div>
+
+    <div class="yellow-trapezoid">
+        <h1>I Create Highly<br>Useable Designs</h1>
+        <div class="small-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum<br>has been the industry's standard dummy text ever since the 1500s, when an unknown printer<br>took a galley of type and scrambled it to make a type specimen book.
+        </div>
+        <div class="watch-more">
+            WATCH MORE
+        </div>
+        <div class="watch-more-line"></div>
+        
+    </div>
+    <div class="watch-more2">
+        WATCH MORE
+    </div>
+    <div class="watch-more-line2"></div>
+    
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+    <div class="line line4"></div>
+    <div class="line line5"></div>
+
+    <div class="vertical-text">2016 © ThemeXpert</div>
+
+    <div class="image-container">
+        <img src="file:///D:/task1.png" alt="Task 1">
+    </div>
+
+    <div class="small-yellow-trapezoid">Our Mission</div>
+
+    <div class="small2-yellow2-trapezoid2">Portfolio</div>
+
+    <div class="mission-text" >    
+        A mission statement, a type of statement of purpose, is a statement which is used to communicate the purpose of an <br>          organization. Although most of the time it will remain the same for a long period of time, it is not uncommon for <br>       organizations to update their mission statement [citation needed] this generally happens when an organization evolves.<br>        Mission statements are normally short and simple statements [citation needed] which outline what the organization's <br>                                    purpose is and are related to the specific sector an organization operates in.
+    </div>
+    
+    <div class="mission-text" >    
+        A mission statement, a type of statement of purpose, is a statement which is used to communicate the purpose of an <br>          organization. Although most of the time it will remain the same for a long period of time, it is not uncommon for <br>       organizations to update their mission statement [citation needed] this generally happens when an organization evolves.<br>        Mission statements are normally short and simple statements [citation needed] which outline what the organization's <br>                                    purpose is and are related to the specific sector an organization operates in.
+    </div>
+    <div class="mission2-text2" >    
+    A mission statement, a type of statement of<br>          purpose, is a statement which is used to<br>  communicate the purpose of an organization.<br>   Although most of the time it will remain the<br>           same for a long period of time, it is not<br>                           uncommon for organizations.
+    </div>
+    <!-- Додано нове фото LOGO1 -->
+    <div class="logo-container">
+        <img src="file:///D:/LOGO.png" alt="LOGO1">
+    </div>
+    <!-- Додано новий прямокутник -->
+    <div class="blue-rectangle rect1"></div>
+    <div class="blue-rectangle rect2"></div>
+    <div class="blue-rectangle rect3"></div>
+    <div class="blue-rectangle rect4"></div>
+    
+
+
+    <div class="image1-container">
+        <img src="file:///D:/image1.png" alt="Image 1">
+    </div>
+    <div class="image2-container">
+        <img src="file:///D:/image2.png" alt="Image 2">
+    </div>
+    <div class="image3-container">
+        <img src="file:///D:/image3.png" alt="Image 3">
+    </div>
+    <div class="image4-container">
+        <img src="file:///D:/image4.png" alt="Image 4">
+    </div>
+    <div class="image5-container">
+        <img src="file:///D:/image5.png" alt="Image 5">
+    </div>
+    
+    <div class="white-space"></div>
+
+
+</body>
+</html>
